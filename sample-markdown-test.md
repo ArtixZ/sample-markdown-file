@@ -2,6 +2,8 @@
 
 This is a comprehensive markdown file demonstrating various formatting options and elements.
 
+> **📁 Local Images Setup:** This file includes examples of relative image paths. Placeholder files have been created in the `images/` directory. Replace them with actual image files to test image rendering. See `images/README.md` for details.
+
 ## Table of Contents
 
 -   [Headers](#headers)
@@ -104,12 +106,51 @@ x^2^ (superscript if supported)
 
 ### Images
 
+#### External Images
+
 ![Alt text for image](https://picsum.photos/300/200)
 
 ![Image with title](https://picsum.photos/400/300 "This is a sample image")
 
-Reference-style image:
+#### Local/Relative Images
+
+> **Note:** These images reference local files. See `images/README.md` for setup instructions.
+
+![Local image example](./images/sample-1.jpg)
+
+![Local image with alt text](./images/sample-2.png "Local sample image")
+
+![Image in subfolder](./images/screenshots/demo.jpg)
+
+#### Different relative path formats
+
+![Same folder](sample-image.jpg)
+
+![Parent folder](../images/shared-image.png)
+
+![Current folder explicit](./local-image.gif)
+
+Reference-style image (external):
 ![Reference image][image-ref]
+
+Reference-style image (local):
+![Local reference image][local-image-ref]
+
+#### Directory Structure for Images
+
+```
+samplemarkdownfile/
+├── sample-markdown-test.md
+├── sample-image.jpg
+├── local-image.gif
+└── images/
+    ├── README.md
+    ├── sample-1.jpg
+    ├── sample-2.png
+    ├── reference-image.jpg
+    └── screenshots/
+        └── demo.jpg
+```
 
 ## Code Examples
 
@@ -386,6 +427,7 @@ graph TD
 [1]: https://example.com "Example website"
 [link-ref]: https://github.com "GitHub"
 [image-ref]: https://picsum.photos/500/300 "Reference style image"
+[local-image-ref]: ./images/reference-image.jpg "Local reference style image"
 
 [^1]: This is the first footnote.
 [^note]: This is another footnote with a custom name.
