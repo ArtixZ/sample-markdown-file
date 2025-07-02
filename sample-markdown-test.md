@@ -10,6 +10,9 @@ This is a comprehensive markdown file demonstrating various formatting options a
 -   [Text Formatting](#text-formatting)
 -   [Lists](#lists)
 -   [Links and Images](#links-and-images)
+    -   [External Images](#external-images)
+    -   [Local/Relative Images](#localrelative-images)
+    -   [HTML Image Tags](#html-image-tags-alternative-syntax)
 -   [Code Examples](#code-examples)
 -   [Tables](#tables)
 -   [Blockquotes](#blockquotes)
@@ -114,21 +117,23 @@ x^2^ (superscript if supported)
 
 #### Local/Relative Images
 
-> **Note:** These images reference local files. See `images/README.md` for setup instructions.
+> **✅ Working Examples:** These images now use SVG placeholders and should display properly. All files exist and have content. They demonstrate relative path syntax.
 
-![Local image example](./images/sample-1.jpg)
+![Local image example](./images/sample-1.svg)
 
-![Local image with alt text](./images/sample-2.png "Local sample image")
+![Local image with alt text](./images/sample-2.svg "Local sample image")
 
-![Image in subfolder](./images/screenshots/demo.jpg)
+![Image in subfolder](./images/screenshots/demo.svg)
 
 #### Different relative path formats
 
-![Same folder](sample-image.jpg)
+![Same folder](sample-image.svg)
 
-![Parent folder](../images/shared-image.png)
+![Parent folder](./images/sample-2.svg)
 
-![Current folder explicit](./local-image.gif)
+> Note: The above uses `./images/sample-2.svg` as a working example. For parent folder syntax, you would use `../images/filename.ext`
+
+![Current folder explicit](./local-image.svg)
 
 Reference-style image (external):
 ![Reference image][image-ref]
@@ -136,20 +141,92 @@ Reference-style image (external):
 Reference-style image (local):
 ![Local reference image][local-image-ref]
 
+#### HTML Image Tags (Alternative Syntax)
+
+> **Note:** HTML tags provide more control over image display and can be used when markdown syntax is insufficient.
+
+<p align="center">
+  <img src="https://picsum.photos/400/200" alt="Centered image using HTML">
+  <br/>
+  <em>Centered image with caption</em>
+</p>
+
+<p align="left">
+  <img src="./images/sample-1.svg" alt="Local image with HTML" width="300" height="200">
+</p>
+
+<p align="right">
+  <img src="https://picsum.photos/250/150" alt="Right-aligned image" width="250">
+</p>
+
+**HTML with size control:**
+<img src="https://picsum.photos/600/300" alt="Resized image" width="300" height="150">
+
+**HTML with inline styling:**
+<img src="https://picsum.photos/200/200" alt="Styled image" style="border-radius: 50%; border: 3px solid #333;">
+
+**Multiple images in a row:**
+
+<p>
+  <img src="https://picsum.photos/150/100" alt="Image 1" width="150">
+  <img src="https://picsum.photos/150/100" alt="Image 2" width="150">
+  <img src="https://picsum.photos/150/100" alt="Image 3" width="150">
+</p>
+
+**Image with link (HTML):**
+<a href="https://picsum.photos" target="_blank">
+<img src="https://picsum.photos/200/120" alt="Clickable image" title="Click to visit Picsum">
+</a>
+
+**Responsive image with max-width:**
+<img src="https://picsum.photos/800/400" alt="Responsive image" style="max-width: 100%; height: auto;">
+
+**Semantic figure with caption:**
+
+<figure align="center">
+  <img src="https://picsum.photos/350/250" alt="Beautiful landscape" width="350">
+  <figcaption><em>A beautiful landscape captured at sunrise</em></figcaption>
+</figure>
+
+**Image with shadow and border:**
+<img src="https://picsum.photos/300/200" alt="Styled image" style="border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 5px;">
+
+**Image gallery using HTML:**
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+  <img src="https://picsum.photos/120/120?random=1" alt="Gallery 1" style="border-radius: 4px;">
+  <img src="https://picsum.photos/120/120?random=2" alt="Gallery 2" style="border-radius: 4px;">
+  <img src="https://picsum.photos/120/120?random=3" alt="Gallery 3" style="border-radius: 4px;">
+  <img src="https://picsum.photos/120/120?random=4" alt="Gallery 4" style="border-radius: 4px;">
+</div>
+
+#### Comparison: Markdown vs HTML Images
+
+| Feature           | Markdown Syntax       | HTML Syntax                         |
+| ----------------- | --------------------- | ----------------------------------- |
+| **Basic image**   | `![alt](src)`         | `<img src="..." alt="...">`         |
+| **Size control**  | ❌ Not supported      | ✅ `width` and `height` attributes  |
+| **Alignment**     | ❌ Limited support    | ✅ `align` attribute or CSS         |
+| **Styling**       | ❌ No styling         | ✅ `style` attribute or CSS classes |
+| **Click events**  | ❌ Link wrapping only | ✅ Full HTML event handling         |
+| **Responsive**    | ❌ Basic              | ✅ Full CSS control                 |
+| **Captions**      | ❌ Limited            | ✅ With additional HTML elements    |
+| **Accessibility** | ✅ Built-in `alt`     | ✅ Full ARIA support                |
+
 #### Directory Structure for Images
 
 ```
 samplemarkdownfile/
 ├── sample-markdown-test.md
-├── sample-image.jpg
-├── local-image.gif
+├── sample-image.svg
+├── local-image.svg
 └── images/
     ├── README.md
-    ├── sample-1.jpg
-    ├── sample-2.png
-    ├── reference-image.jpg
+    ├── sample-1.svg
+    ├── sample-2.svg
+    ├── reference-image.svg
     └── screenshots/
-        └── demo.jpg
+        └── demo.svg
 ```
 
 ## Code Examples
@@ -427,7 +504,7 @@ graph TD
 [1]: https://example.com "Example website"
 [link-ref]: https://github.com "GitHub"
 [image-ref]: https://picsum.photos/500/300 "Reference style image"
-[local-image-ref]: ./images/reference-image.jpg "Local reference style image"
+[local-image-ref]: ./images/reference-image.svg "Local reference style image"
 
 [^1]: This is the first footnote.
 [^note]: This is another footnote with a custom name.

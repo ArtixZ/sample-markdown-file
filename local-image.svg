@@ -1,0 +1,10 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#E67E22"/>
+  <rect x="25" y="25" width="150" height="150" fill="#FFFFFF" opacity="0.2" transform="rotate(45 100 100)"/>
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Local Image
+  </text>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="10" fill="#FDF2E9" text-anchor="middle" dominant-baseline="middle">
+    200×200 SVG
+  </text>
+</svg> 

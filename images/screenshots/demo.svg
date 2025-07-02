@@ -1,0 +1,32 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#2C3E50"/>
+  
+  <!-- Browser window mockup -->
+  <rect x="50" y="80" width="500" height="280" fill="#ECF0F1" rx="8"/>
+  <rect x="50" y="80" width="500" height="40" fill="#34495E" rx="8 8 0 0"/>
+  
+  <!-- Browser buttons -->
+  <circle cx="70" cy="100" r="6" fill="#E74C3C"/>
+  <circle cx="90" cy="100" r="6" fill="#F39C12"/>
+  <circle cx="110" cy="100" r="6" fill="#27AE60"/>
+  
+  <!-- Address bar -->
+  <rect x="140" y="90" width="300" height="20" fill="#BDC3C7" rx="10"/>
+  
+  <!-- Content area -->
+  <rect x="70" y="140" width="460" height="200" fill="#FFFFFF" rx="4"/>
+  
+  <!-- Mock content -->
+  <rect x="90" y="160" width="200" height="15" fill="#3498DB"/>
+  <rect x="90" y="185" width="300" height="8" fill="#7F8C8D"/>
+  <rect x="90" y="200" width="250" height="8" fill="#7F8C8D"/>
+  <rect x="90" y="225" width="180" height="40" fill="#E67E22"/>
+  
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Demo Screenshot
+  </text>
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="14" fill="#BDC3C7" text-anchor="middle">
+    600×400 SVG Browser Mockup
+  </text>
+</svg> 

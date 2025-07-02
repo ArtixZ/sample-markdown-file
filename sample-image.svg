@@ -1,0 +1,10 @@
+<svg width="350" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="350" height="250" fill="#1ABC9C"/>
+  <polygon points="175,50 225,150 125,150" fill="#FFFFFF" opacity="0.9"/>
+  <text x="175" y="200" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Root Level Image
+  </text>
+  <text x="175" y="225" font-family="Arial, sans-serif" font-size="12" fill="#E8F8F5" text-anchor="middle" dominant-baseline="middle">
+    Same folder as markdown
+  </text>
+</svg> 
